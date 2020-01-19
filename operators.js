@@ -14,3 +14,14 @@ let a = 2;
 let x = 1 + (a *= 2); 
  
 // a=4; x=5
+
+// Операторы сравнения
+// Каким будет результат этих выражений?
+
+5 > 4 // true
+"ананас" > "яблоко" // false 
+"2" > "12"  //true
+undefined == null  // true (спец. правило языка)
+undefined === null  //false
+null == "\n0\n" //false
+null === +"\n0\n" // false
