@@ -25,3 +25,9 @@ undefined == null  // true (спец. правило языка)
 undefined === null  //false
 null == "\n0\n" //false
 null === +"\n0\n" // false
+
+
+// Взаимодействие: alert, prompt, confirm
+
+let name = prompt("Как тебя зовут?",'');
+alert(`Твое имя ${name}`);
