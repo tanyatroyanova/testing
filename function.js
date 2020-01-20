@@ -91,3 +91,29 @@ if (n < 1){
 }else {
     alert(pow(x,n));
 }
+
+//Замените код Function Expression стрелочной функцией:
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+  function() { alert("Вы согласились."); },
+  function() { alert("Вы отменили выполнение."); }
+);
+//Решение
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+let yes = () => alert("Вы согласились.");
+let no = () => alert("Вы отменили выполнение.");
+
+ask("Вы согласны?",yes,no);
+
+
+
