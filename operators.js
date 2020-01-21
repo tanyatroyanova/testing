@@ -26,8 +26,7 @@ undefined === null  //false
 null == "\n0\n" //false
 null === +"\n0\n" // false
 
-
 // Взаимодействие: alert, prompt, confirm
 
-let name = prompt("Как тебя зовут?",'');
+let name = prompt("Как тебя зовут?", '');
 alert(`Твое имя ${name}`);
