@@ -47,9 +47,8 @@ function checkAge(age) {
 
 // Используя оператор ||
 function checkAge(age) {
-    (age > 18) 
-      return (age > 18) || confirm('Родители разрешили?');
-  }
+    return (age > 18) || confirm('Родители разрешили?');
+}
 
 // #3
 // Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
