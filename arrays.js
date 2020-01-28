@@ -113,3 +113,52 @@ function getMaxSubSum(arr) {
     }
     return sum;
 }
+
+// 1. Перебор массива с выводом в консоль кажого элемента
+
+function pereborMassiva(arr) {
+    for (let i of arr) {
+        console.log(i);
+    }
+}
+
+// 2. Перобразовать массив в строку и обртано в массив 
+
+function preobrazovMassiva(arr) {
+    let string = "";
+    
+    for (let i of arr) {
+        string += i;
+    }
+    alert(string);
+    
+    let arr2 = [];
+
+    for (let i = 0; i <= string.length; i++) {
+        arr2[i] = string[i];
+    }
+    alert(arr2);
+
+}
+
+// 3. Добавить к каждому элементу массива слова hello 
+
+function addHello(arr) {
+    for (let i = 0; i <= arr.length-1; i++) {
+        arr[i] += "hello";
+    }
+    return arr;
+}
+
+// 4. Преобразовать числовой массив в boolean
+
+function makeArrayBoolean(arr) {
+    for (let i = 0; i <= arr.length-1; i++) {
+        if (arr[i] === 0) {
+            arr[i] = "false";
+        } else {
+            arr[i] = "true";
+        }
+    }
+    return arr;
+}
