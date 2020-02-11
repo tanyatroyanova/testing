@@ -10,4 +10,4 @@ css:
 2)Worklife ссылка:   document.querySelectorAll('div#orb-nav-links li.orb-nav-worklife a')
 3)document.querySelectorAll('.module.module--promo li.media-list__item.media-list__item--1 a.block-link__overlay-link')
 4)document.querySelectorAll('div#orb-nav-links li:nth-child(even):not([class$="hide"])')
-5)document.querySelectorAll('section.module.module--header #text')
+5)document.querySelector('section.module.module--header h2').nextSibling
