@@ -41,7 +41,7 @@ const singleton = (function() {
 
     return {
       getInstance: function() {
-        if(!instance) {
+        if (!instance) {
           instance = createInstance();
         }
         return instance;
