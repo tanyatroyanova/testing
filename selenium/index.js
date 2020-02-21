@@ -8,8 +8,8 @@ const singleton = (function() {
         let driver = await new Builder().forBrowser("chrome").build();
         await driver.get("https://www.bbc.com/");
         await driver.findElement(By.id("orb-search-q")).sendKeys("selenium");
-        console.log(driver.findElement(By.id("orb-search-q")).isDisplayed());
-        console.log(driver.findElement(By.id("orb-search-q")).isEnabled());
+        console.log(await driver.findElement(By.id("orb-search-q")).isDisplayed());
+        console.log(await driver.findElement(By.id("orb-search-q")).isEnabled());
         await driver.findElement(By.xpath('//div[@id="orb-nav-links"]/ul/li[@class="orb-nav-newsdotcom"]/a')).click();        
     }
 
@@ -17,6 +17,8 @@ const singleton = (function() {
         let driver = await new Builder().forBrowser("firefox").build();
         await driver.get("https://www.bbc.com/");
         await driver.findElement(By.id("orb-search-q")).sendKeys("selenium");
+        console.log(await driver.findElement(By.id("orb-search-q")).isDisplayed());
+        console.log(await driver.findElement(By.id("orb-search-q")).isEnabled());
         await driver.findElement(By.xpath('//div[@id="orb-nav-links"]/ul/li[@class="orb-nav-newsdotcom"]/a')).click();       
     }    
 
@@ -24,7 +26,9 @@ const singleton = (function() {
         let driver = await new Builder().forBrowser("ie").build();
         await driver.get("https://www.bbc.com/");
         await driver.findElement(By.css('input#orb-search-q')).sendKeys("selenium");
-        //await driver.findElement(By.css("#orb-search-button")).click();
+        console.log(await driver.findElement(By.id("orb-search-q")).isDisplayed());
+        console.log(await driver.findElement(By.id("orb-search-q")).isEnabled());
+        await driver.findElement(By.xpath('//div[@id="orb-nav-links"]/ul/li[@class="orb-nav-newsdotcom"]/a')).click();   
     }
 
     function createInstance() {
