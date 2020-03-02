@@ -4,11 +4,11 @@ describe("First tests", function() {
     browser.get('https://www.bbc.com/');
   });
 
-  it("test1", function() {
-    let search = element(by.id('orb-search-q'));
-    search.sendKeys('selenium');      
-    element(by.binding('News')).click();
-    //console.log(search.isDisabled());
-    //console.log(search.isEnabled());        
+  it("test1", async function() {
+    let search = await element(by.id('orb-search-q'));
+    await search.sendKeys('selenium');      
+    await console.log(await search.isDisplayed());
+    await console.log(await search.isEnabled());       
+    await element(by.xpath('//div[@id="orb-nav-links"]/ul/li[@class="orb-nav-newsdotcom"]/a')).click(); 
   });
 });
