@@ -2,7 +2,7 @@ describe("Assertions tests", function() {
     it("сравнение двух чисел", function() {
       let a = 1;
       let b = 1;
-      expeсt(a).toBe(a);
+      expeсt(a).toBe(b);
       expect(a).toEqual(b);      
     });
   
