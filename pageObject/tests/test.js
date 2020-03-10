@@ -10,16 +10,15 @@ describe ("Check that the text in more section of London and Paris locations is 
         await location_page.selectCity('London'); 
         browser.sleep(5000);  
         let londonMoreList = await main_page.rememberTheMoreList(); 
-        console.log(londonMoreList);
-        //browser.close();
-        //browser.sleep(10000);
-        //browser.restart();
+        //console.log(londonMoreList);
+
         await main_page.get();
         await main_page.clickLocation();
         await main_page.swithToTheTab(2);        
         await location_page.clearCityInputField();
+        browser.sleep(1000); 
         await location_page.selectCity('Paris');  
-        browser.sleep(5000);   
+        browser.sleep(2000);   
         let parisMoreList = await main_page.rememberTheMoreList(); 
         
         expect(londonMoreList).toEqual(parisMoreList);      
