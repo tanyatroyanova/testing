@@ -17,9 +17,9 @@ let main_page = function() {
         await changeLocationButton.click();
     };     
 
-    this.swithToTheSecondTab = async function() {
+    this.swithToTheTab = async function(number) {
         await browser.getAllWindowHandles().then(async function (handles){
-            await browser.switchTo().window(handles[handles.length-1])
+            await browser.switchTo().window(handles[number])
         });
     };
 

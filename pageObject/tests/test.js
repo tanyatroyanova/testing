@@ -5,20 +5,23 @@ describe ("Check that the text in more section of London and Paris locations is 
     it("test1", async function() {
         await main_page.get();
         await main_page.clickLocation();
-        await main_page.swithToTheSecondTab();        
+        await main_page.swithToTheTab(1);        
         await location_page.clearCityInputField();
-        await location_page.selectCity('London');   
+        await location_page.selectCity('London'); 
+        browser.sleep(5000);  
         let londonMoreList = await main_page.rememberTheMoreList(); 
         console.log(londonMoreList);
-    
+        //browser.close();
         //browser.sleep(10000);
-/*
+        //browser.restart();
+        await main_page.get();
         await main_page.clickLocation();
-        await main_page.swithToTheSecondTab();        
+        await main_page.swithToTheTab(2);        
         await location_page.clearCityInputField();
-        await location_page.selectCity('Paris');   
+        await location_page.selectCity('Paris');  
+        browser.sleep(5000);   
         let parisMoreList = await main_page.rememberTheMoreList(); 
         
-        expect(londonMoreList).toEqual(parisMoreList);      */
+        expect(londonMoreList).toEqual(parisMoreList);      
     });
 });
