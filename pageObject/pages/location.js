@@ -4,18 +4,15 @@ let location_page = function() {
 
     this.selectCity = async function(name) {
         await searchCity.sendKeys(name);
-        browser.sleep(5000);
+        let until = protractor.ExpectedConditions;
+        browser.wait(until.presenceOf(cityPopup), 5000, 'cityPopup taking too long to appear in the DOM');
         await element(by.className('b-autocomplete-item b-autocomplete-item_type_geo b-autocomplete-item_subtype_region i-bem b-autocomplete-item_js_inited')).click();   
     };
 
     this.clearCityInputField = async function() {
         await searchCity.clear();
-    };
-
-    this.swithToTheFirstTab = async function() {
-        await browser.getAllWindowHandles().then(async function (handles){
-            await browser.switchTo().window(handles[handles.length-2])
-        });
+        let until = protractor.ExpectedConditions;
+        browser.wait(until.presenceOf(cityPopup), 5000, 'cityPopup taking too long to appear in the DOM');
     };
 };
 module.exports = new location_page();

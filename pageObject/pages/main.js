@@ -23,7 +23,9 @@ let main_page = function() {
         });
     };
 
-    this.rememberTheMoreList = async function() {       
+    this.rememberTheMoreList = async function() {  
+        let until = protractor.ExpectedConditions;
+        browser.wait(until.presenceOf(moreButton), 5000, 'moreButton taking too long to appear in the DOM');     
         await moreButton.click();
         let theMoreList = element.all(by.className('home-link home-tabs__more-link home-link_black_yes')).getText();
         return theMoreList;
