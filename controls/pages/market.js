@@ -5,7 +5,10 @@ let market_page = function() {
     this.radioButtonDelivery = element(by.className("_2zRi9ex2Rl"));
     this.categoryText = element(by.className("_3xtMbW8XL4"));   
     this.searchInput = element(by.className("input__control"));
+    this.Buttondropdown = element(by.buttonText("Показывать по 48"));
+    this.selectOptions = element.all(by.className("select__text"));
     
+    this.appleCheckBox = element(by.className("LhMupC0dLR"));
     this.searchInputSpan = element(by.className("suggest2-autocomplete__entered"));
 
     this.get = async function() {
@@ -17,16 +20,8 @@ let market_page = function() {
         browser.actions().mouseMove(element).perform();
     };
 
-    this.check = function(element) {  
-        if (element.checked == true) {
-            element.click();
-        }            
-    };
-
-    this.uncheck = function(element) {  
-        if (element.checked == false) {
-            element.click();
-        }            
+    this.clickOncheckBox = function(element) {  
+            element.click();         
     };
 
     this.checkRadioButton = function(element) {
@@ -37,14 +32,20 @@ let market_page = function() {
     };
 
     this.getInsertedText = function(element) {
-        return element.getAttribute('value');
+        return element.getAttribute('value').getText();
     };
 
-    this.getClassAndValue = async function(element) {
+    this.getValue = async function(element) {
         return await element.getAttribute('value');
-        return await element.getAttribute('class');
-    }
+    };
 
+    this.getClass = async function(element) {
+        return await element.getAttribute('class');
+    };
+
+    this.selectFirstValueFromDropDown = async function(options) { 
+        await options.first().click();
+    };
 }
 
 module.exports = new market_page();
