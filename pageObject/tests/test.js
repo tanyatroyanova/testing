@@ -1,5 +1,6 @@
 let main_page = require('../pages/main');
 let location_page = require('../pages/location');
+let waits = require('../pages/waits');
 
 describe ("Check that the text in more section of London and Paris locations is the same", function() {   
     it("test1", async function() {
