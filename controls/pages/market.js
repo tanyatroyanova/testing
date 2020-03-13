@@ -32,7 +32,7 @@ let market_page = function() {
     };
 
     this.getInsertedText = function(element) {
-        return element.getAttribute('value').getText();
+        return element.getText();
     };
 
     this.getValue = async function(element) {
