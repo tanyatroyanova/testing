@@ -43,8 +43,8 @@ let market_page = function() {
         return await element.getAttribute('class');
     };
 
-    this.selectFirstValueFromDropDown = async function(options) { 
-        await options.first().click();
+    this.selectFirstValueFromDropDown = async function(options, number = 0) { 
+        await options.get(number).click();
     };
 }
 
