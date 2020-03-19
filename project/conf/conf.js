@@ -4,7 +4,8 @@ exports.config = {
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    'chromeOptions': { 'args': ['incognito'] } 
   },
 
   // Framework to use. Jasmine is recommended.
@@ -17,5 +18,7 @@ exports.config = {
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
     defaultTimeoutInterval: 60000
-  }
+  },
+
+  restartBrowserBetweenTests: true
 };

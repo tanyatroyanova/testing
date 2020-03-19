@@ -1,11 +1,15 @@
-let yandex_mail = require('../pages/yandex_mail');
-let waits = require('../pages/waits');
+const Yandex_mail = require('../pages/yandex_mail');
+const Waits = require('../pages/waits');
 
 describe("Pull of tests 1", function() {
+    let yandex_mail = new Yandex_mail();
+    let waits = new Waits();
 
     beforeEach(async function() {
+        yandex_mail = new Yandex_mail();
+        waits = new Waits();
         await yandex_mail.get('https://yandex.by/');
-    });
+    })
 
     xit("Test #1: Логин на яндекс почту", async function() {
         await yandex_mail.clickOnOpenMailLoginPage();
@@ -17,7 +21,7 @@ describe("Pull of tests 1", function() {
         expect(yandex_mail.checkUserName()).toEqual(login);
     });
 
-    xit("Test #2: Яндекс почта - логаут", async function() {
+    it("Test #2: Яндекс почта - логаут", async function() {
         await yandex_mail.clickOnOpenMailLoginPage();
         await yandex_mail.swithToTheTab(1);
         await yandex_mail.insertLogin();
@@ -50,7 +54,7 @@ describe("Pull of tests 1", function() {
         await expect(errorMessage).toBe('Такого аккаунта нет');
     });
 
-    xit("Яндекс - навигация", async function() {
+    xit("Test #5: Яндекс - навигация", async function() {
         // Видео
         await yandex_mail.clickOnTheLink(yandex_mail.videoLink);
         await yandex_mail.checkUrl('video')
@@ -80,7 +84,7 @@ describe("Pull of tests 1", function() {
         await yandex_mail.checkUrl('music')
     });
 
-    xit("Test #3: Яндекс - переключение языка на английский", async function() {
+    it("Test #6: Яндекс - переключение языка на английский", async function() {
         await yandex_mail.changeLanguage();
         await expect(yandex_mail.langDropDown.getText()).toEqual('eng');
     });
