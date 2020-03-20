@@ -2,8 +2,8 @@ const Yandex_mail = require('../pages/yandex_mail');
 const Waits = require('../pages/waits');
 
 describe("Pull of tests 1", function() {
-    let yandex_mail = new Yandex_mail();
-    let waits = new Waits();
+    let yandex_mail;
+    let waits;
 
     beforeEach(async function() {
         yandex_mail = new Yandex_mail();
@@ -11,7 +11,7 @@ describe("Pull of tests 1", function() {
         await yandex_mail.get('https://yandex.by/');
     })
 
-    xit("Test #1: Логин на яндекс почту", async function() {
+    fit("Test #1: Логин на яндекс почту", async function() {
         await yandex_mail.clickOnOpenMailLoginPage();
         await yandex_mail.swithToTheTab(1);
         let login = await yandex_mail.insertLogin();
@@ -21,7 +21,7 @@ describe("Pull of tests 1", function() {
         expect(yandex_mail.checkUserName()).toEqual(login);
     });
 
-    it("Test #2: Яндекс почта - логаут", async function() {
+    fit("Test #2: Яндекс почта - логаут", async function() {
         await yandex_mail.clickOnOpenMailLoginPage();
         await yandex_mail.swithToTheTab(1);
         await yandex_mail.insertLogin();
@@ -32,7 +32,7 @@ describe("Pull of tests 1", function() {
         await yandex_mail.checkThatUserIsLogout();
     });
 
-    xit("Test #3: Яндекс почта - невалидный пароль", async function() {
+    it("Test #3: Яндекс почта - невалидный пароль", async function() {
         await yandex_mail.clickOnOpenMailLoginPage();
         await yandex_mail.swithToTheTab(1);
         await yandex_mail.insertLogin("AutotestUser");
@@ -43,7 +43,7 @@ describe("Pull of tests 1", function() {
         await expect(errorMessage).toBe('Неверный пароль');
     });
 
-    xit("Test #4: Яндекс почта - невалидный логин", async function() {
+    it("Test #4: Яндекс почта - невалидный логин", async function() {
         await yandex_mail.clickOnOpenMailLoginPage();
         await yandex_mail.swithToTheTab(1);
         await yandex_mail.insertLogin("NoAutotestUser");
@@ -54,7 +54,7 @@ describe("Pull of tests 1", function() {
         await expect(errorMessage).toBe('Такого аккаунта нет');
     });
 
-    xit("Test #5: Яндекс - навигация", async function() {
+    it("Test #5: Яндекс - навигация", async function() {
         // Видео
         await yandex_mail.clickOnTheLink(yandex_mail.videoLink);
         await yandex_mail.checkUrl('video')
