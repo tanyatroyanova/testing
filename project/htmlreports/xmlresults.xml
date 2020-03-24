@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="11" errors="0" failures="0" tests="13" time="39.305">
+ <testsuite name="Pull of tests 1" timestamp="2020-03-24T23:47:20" hostname="localhost" time="39.3" errors="0" tests="6" skipped="0" disabled="4" failures="0">
+  <testcase classname="Pull of tests 1" name="Test #1: Логин на яндекс почту" time="17.142" />
+  <testcase classname="Pull of tests 1" name="Test #2: Яндекс почта - логаут" time="22.157" />
+  <testcase classname="Pull of tests 1" name="Test #3: Яндекс почта - невалидный пароль" time="0">
+   <skipped />
+  </testcase>
+  <testcase classname="Pull of tests 1" name="Test #4: Яндекс почта - невалидный логин" time="0">
+   <skipped />
+  </testcase>
+  <testcase classname="Pull of tests 1" name="Test #5: Яндекс - навигация" time="0">
+   <skipped />
+  </testcase>
+  <testcase classname="Pull of tests 1" name="Test #6: Яндекс - переключение языка на английский" time="0">
+   <skipped />
+  </testcase>
+ </testsuite>
+ <testsuite name="Работа с базовыми контролами" timestamp="2020-03-24T23:47:59" hostname="localhost" time="0.005" errors="0" tests="6" skipped="0" disabled="6" failures="0">
+  <testcase classname="Работа с базовыми контролами" name="check and uncheck" time="0">
+   <skipped />
+  </testcase>
+  <testcase classname="Работа с базовыми контролами" name="scroll" time="0.001">
+   <skipped />
+  </testcase>
+  <testcase classname="Работа с базовыми контролами" name="check RadioButton" time="0.002">
+   <skipped />
+  </testcase>
+  <testcase classname="Работа с базовыми контролами" name="ввести текст в инпут и получить введеный текст(getAttribute)" time="0">
+   <skipped />
+  </testcase>
+  <testcase classname="Работа с базовыми контролами" name="getAttribute(получить значение аттрибутов class, value)" time="0">
+   <skipped />
+  </testcase>
+  <testcase classname="Работа с базовыми контролами" name="select Value from dropdown" time="0">
+   <skipped />
+  </testcase>
+ </testsuite>
+ <testsuite name="Check that the text in more section of London and Paris locations is the same" timestamp="2020-03-24T23:47:59" hostname="localhost" time="0" errors="0" tests="1" skipped="0" disabled="1" failures="0">
+  <testcase classname="Check that the text in more section of London and Paris locations is the same" name="test1" time="0">
+   <skipped />
+  </testcase>
+ </testsuite>
+</testsuites>

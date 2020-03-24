@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1585082840052' stop='1585082879353'>
+    <name>Pull of tests 1</name>
+    <title>Pull of tests 1</title>
+    <test-cases>
+        <test-case start='1585082840052' status='passed' stop='1585082857194'>
+            <name>Test #1: Логин на яндекс почту</name>
+            <title>Test #1: Логин на яндекс почту</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1585082857194' status='passed' stop='1585082879351'>
+            <name>Test #2: Яндекс почта - логаут</name>
+            <title>Test #2: Яндекс почта - логаут</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1585082879352' status='pending' stop='1585082879352'>
+            <name>Test #3: Яндекс почта - невалидный пароль</name>
+            <title>Test #3: Яндекс почта - невалидный пароль</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879352' status='pending' stop='1585082879352'>
+            <name>Test #4: Яндекс почта - невалидный логин</name>
+            <title>Test #4: Яндекс почта - невалидный логин</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879352' status='pending' stop='1585082879352'>
+            <name>Test #5: Яндекс - навигация</name>
+            <title>Test #5: Яндекс - навигация</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879352' status='pending' stop='1585082879352'>
+            <name>Test #6: Яндекс - переключение языка на английский</name>
+            <title>Test #6: Яндекс - переключение языка на английский</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

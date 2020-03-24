@@ -20,5 +20,47 @@ exports.config = {
     defaultTimeoutInterval: 60000
   },
 
-  restartBrowserBetweenTests: true
+  restartBrowserBetweenTests: true,
+    
+  onPrepare: function() {
+    var jasmineReporters = require('jasmine-reporters');
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+        consolidateAll: true,
+        savePath: './project/htmlreports',
+        filePrefix: 'xmlresults'
+    }));
+
+    var AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter({
+      resultsDir: './project/allure-results'
+    }));
+
+  },
+  
+  //HTMLReport called once tests are finished
+  onComplete: function() {
+    var browserName, browserVersion;
+    var capsPromise = browser.getCapabilities();
+
+    capsPromise.then(function (caps) {
+      browserName = caps.get('browserName');
+      browserVersion = caps.get('version');
+      platform = caps.get('platform');
+
+      var HTMLReport = require('protractor-html-reporter-2');
+
+      testConfig = {
+          reportTitle: 'Protractor Test Execution Report',
+          outputPath: './project/htmlreports',
+          outputFilename: 'ProtractorTestReport',
+          screenshotPath: './screenshots',
+          testBrowser: browserName,
+          browserVersion: browserVersion,
+          modifiedSuiteName: false,
+          screenshotsOnlyOnFailure: true,
+          testPlatform: platform
+      };
+      new HTMLReport().from('./project/htmlreports/xmlresults.xml', testConfig);
+  });
+  },
 };

@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1585082879369' stop='1585082879374'>
+    <name>Работа с базовыми контролами</name>
+    <title>Работа с базовыми контролами</title>
+    <test-cases>
+        <test-case start='1585082879370' status='pending' stop='1585082879370'>
+            <name>check and uncheck</name>
+            <title>check and uncheck</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879371' status='pending' stop='1585082879371'>
+            <name>scroll</name>
+            <title>scroll</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879371' status='pending' stop='1585082879373'>
+            <name>check RadioButton</name>
+            <title>check RadioButton</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879373' status='pending' stop='1585082879373'>
+            <name>ввести текст в инпут и получить введеный текст(getAttribute)</name>
+            <title>ввести текст в инпут и получить введеный текст(getAttribute)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879373' status='pending' stop='1585082879373'>
+            <name>getAttribute(получить значение аттрибутов class, value)</name>
+            <title>getAttribute(получить значение аттрибутов class, value)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1585082879373' status='pending' stop='1585082879374'>
+            <name>select Value from dropdown</name>
+            <title>select Value from dropdown</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

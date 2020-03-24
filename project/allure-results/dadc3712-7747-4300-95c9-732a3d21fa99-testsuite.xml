@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1585082879384' stop='1585082879384'>
+    <name>Check that the text in more section of London and Paris locations is the same</name>
+    <title>Check that the text in more section of London and Paris locations is the same</title>
+    <test-cases>
+        <test-case start='1585082879384' status='pending' stop='1585082879384'>
+            <name>test1</name>
+            <title>test1</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was ignored</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
